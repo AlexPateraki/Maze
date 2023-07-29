@@ -1,1 +1,10 @@
-# Labyrinth
+# Maze
+The project involves the implementation of a maze traversal and solving program using the stack, recursive functions, register conventions, polling, and interrupts in MIPS Assembly. The program should offer two functionalities: maze game implementation and maze solving. In the maze game, the user can traverse the maze with the goal of reaching the exit. If the appropriate key is pressed, the optimal path from the entrance to the exit should be determined for any maze. The initial maze map is stored as a character array in the data segment of the program, along with variables describing the width, height, and starting point of the maze.
+
+Each maze consists of an entrance, an exit, walls, and pathways. The pathways are represented by '.' (periods), and the walls are represented by 'I' (capital letter "i"). Moving and solving the maze involves moving within adjacent pathways (up, down, left, or right) and not through walls. The program should navigate through the maze until it reaches the exit, marked by the character '@' in the array. The project requires both C and MIPS Assembly implementations of the program.  
+
+The user can navigate through a maze using the "W", "S", "A", and "D" keys to move up, down, left, and right along pathways. The user's current position is represented by the letter 'P' in the maze. Moving on walls is not allowed. When the player reaches the maze's exit, a message "Winner Winner Chicken Dinner!" is displayed. Alternatively, pressing the "E" key on the keyboard will display the optimal path.
+
+The maze traversal is achieved through a recursive function. Each call to the recursive function takes a step in the maze's pathway. To track the steps taken, the function replaces the array element representing a pathway ('.') with an asterisk ('*') and then displays the updated maze. The player's position remains represented by the letter 'P'.
+
+During the search for the optimal path, when the recursive function visits the exit element ('@'), the solution to the maze should be displayed. The correct pathway cells should be marked with '#' instead of '*' and the exit element ('@') should be changed to '%'. The player's position remains unchanged. Before the end of the program, the maze with the correct path should be displayed one last time.
